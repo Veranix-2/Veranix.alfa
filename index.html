@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="/img/50774346.jpg">
+    <title>Vezunchik</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <header>
+              <button class="button2" id="menuButton">Меню</button>
+            </header>
+            <main>
+             
+            </main>
+          </div>
+          
+          <div class="menu" id="menu">
+            <!-- меню -->
+            <ul>
+                <li><a href="https://t.me/veranix1">Telegram</a></li>
+                <li><a href="https://taplink.cc/yusufuz">About</a></li>
+              <li><a href="https://veranixblog.renderforestsites.com/">Mening Portfolio Saytim</a></li>
+            </ul>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- <p>.</p> -->
+            <ul>
+              <li><a href="login.html"><button class="b4" style="width: 200px; height: 30px;">Login</button></a></li>
+            </ul>
+          </div>
+    </header>
+<main>
+<h1>Hello world</h1>
+
+
+</main>
+    <footer>
+
+
+
+    </footer>
+    <style>
+        .b4{
+          background-color: #4b4f57;
+        }
+          body{
+              background-color: rgb(from rgba(167, 165, 165, 0.788) r g b);
+          }
+          img{
+              align-self: center;
+             border-radius: 20px; 
+          }
+          .row{
+              box-shadow: 10px 10px 10px 20px rgb(138, 138, 148);
+              text-align: center;
+              justify-items: center;
+              padding: 10px 30%;
+              border-radius: 10px;
+              display: flex;
+              gap: 70px;
+          }
+          .button2{
+              color: rgb(255, 255, 255);
+              background-color: rgb(159, 160, 160);
+              border-radius: 10px;
+          }
+          img{
+              margin: 0px auto 0px auto;
+              display: block;
+          }
+          .button {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        background-color: rgba(30, 143, 255, 0);
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      /* .button2{
+          justify-items: stretch;
+          align-items: flex-end;
+      } */
+      
+      
+      body, html {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      
+      .container {
+        position: relative;
+        overflow-x: hidden;
+      }
+      
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: flex-end;
+      }
+      
+      .menu {
+        position: fixed;
+        top: 0;
+        right: -250px; /* начальное положение за пределами экрана */
+        width: 250px;
+        height: 100%;
+        background-color: #f4f4f4;
+        transition: right 0.3s ease; /* плавное движение */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+      
+      .menu ul {
+        list-style-type: none;
+        padding: 20px;
+      }
+      
+      .menu ul li {
+        margin-bottom: 10px;
+      }
+      
+      .menu ul li a {
+        color: #333;
+        text-decoration: none;
+      }
+      
+      .menu ul li a:hover {
+        text-decoration: underline;
+      }
+      </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.getElementById('menuButton');
+      const menu = document.getElementById('menu');
+      let menuOpen = false;
+    
+      menuButton.addEventListener('click', function() {
+        toggleMenu();
+      });
+    
+      document.addEventListener('click', function(event) {
+        const isClickInsideMenu = menu.contains(event.target);
+        const isClickInsideMenuButton = menuButton.contains(event.target);
+    
+        if (!isClickInsideMenu && !isClickInsideMenuButton && menuOpen) {
+          closeMenu();
+        }
+      });
+    
+      function toggleMenu() {
+        if (menuOpen) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      }
+    
+      function openMenu() {
+        menu.style.right = '0';
+        menuOpen = true;
+      }
+    
+      function closeMenu() {
+        menu.style.right = '-250px';
+        menuOpen = false;
+      }
+    });
+    
+    
+    
+    // Knopka menu knopka ArrowRight
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuButton = document.getElementById('menuButton');
+      const menu = document.getElementById('menu');
+      let menuOpen = false;
+    
+      menuButton.addEventListener('click', function() {
+        toggleMenu();
+      });
+    
+      document.addEventListener('click', function(event) {
+        const isClickInsideMenu = menu.contains(event.target);
+        const isClickInsideMenuButton = menuButton.contains(event.target);
+    
+        if (!isClickInsideMenu && !isClickInsideMenuButton && menuOpen) {
+          closeMenu();
+        }
+      });
+    
+      document.addEventListener('keydown', function(event) {
+        if (event.key === "ArrowRight") {
+          toggleMenu();
+        }
+      });
+    
+      function toggleMenu() {
+        if (menuOpen) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      }
+    
+      function openMenu() {
+        menu.style.right = '0';
+        menuOpen = true;
+      }
+    
+      function closeMenu() {
+        menu.style.right = '-250px';
+        menuOpen = false;
+      }
+    });
+    
+    //------------------------------------------------------------------------------------//
+    
+    </script>
+</body>
+</html>

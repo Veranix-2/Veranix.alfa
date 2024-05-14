@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <p>.</p>
+
+  <div class="row">
+    <div class="column">
+      <h2>Login</h2>
+      <form id="loginForm" action="index.html">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Login" id="loginButton">
+        <div id="progressBar" style="display: none;">
+          <div id="progress" style="width: 0%; height: 20px; background-color: rgba(121, 121, 121, 0.377); border-radius: 10px;"></div>
+        </div>
+<form id="loginForm">
+  </form>
+      </form>
+    </div>
+  </div>
+
+
+  <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+      const loginButton = document.getElementById('loginButton');
+      const progressBar = document.getElementById('progressBar');
+      const progress = document.getElementById('progress');
+
+      loginButton.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        // Получаем значения логина и пароля
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // Проверяем правильность логина и пароля (здесь у вас должен быть ваш метод проверки)
+        if (username === 'yusufbek' && password === '732') {
+          // Показываем прогресс-бар
+          progressBar.style.display = 'block';
+
+          // Симулируем загрузку данных (прогресс-бар увеличивается)
+          let width = 0;
+          const interval = setInterval(function() {
+            width += 10;
+            progress.style.width = width + '%';
+
+            if (width >= 100) {
+              clearInterval(interval);
+              // После завершения загрузки перенаправляем пользователя на страницу "index.html"
+              window.location.href = 'index.html';
+            }
+          }, 150);
+        } else {
+          alert("Erorr 404");
+          console.log('Неправильный логин или пароль');
+        }
+      });
+    });
+  </script>
+
+
+  <style>
+    h2{
+        text-align: center;
+    }
+
+
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #ccc;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.column {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 93px;
+}
+
+input[type="submit"] {
+  background-color: dodgerblue;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: royalblue;
+}
+
+  </style>
+</body>
+</html>
